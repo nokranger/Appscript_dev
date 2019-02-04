@@ -1,5 +1,1188 @@
+<html>
+
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://fonts.googleapis.com/css?family=Lora" rel="stylesheet">
+  <link rel="stylesheet" href="css/edit.css">
+  <link rel="stylesheet" href="css/bootstrap-grid.css">
+  <!-- <link rel="stylesheet" href="css/bootstrap.css"> -->
+  <link rel="stylesheet" href="css/bootstrap.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link href="css/multiple-select.css" rel="stylesheet" />
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+  <link rel="stylesheet" href="css/bootstrap-tagsinput.css">
+  <link rel="stylesheet" href="assets/app.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.5.0/css/all.css' integrity='sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU'
+    crossorigin='anonymous'>
+  <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css'>
+  <title>Form register</title>
+  <style>
+    header{
+      background:
+    -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+      background:
+    linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+          }
+    footer{
+      background:
+    -webkit-linear-gradient(65deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    -webkit-linear-gradient(135deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    -webkit-linear-gradient(205deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+      background:
+    linear-gradient(25deg, hsla(176.64, 68.42%, 59.02%, 1) 10%, hsla(176.64, 68.42%, 59.02%, 0) 80%),
+    linear-gradient(315deg, hsla(192.8, 73.21%, 43.92%, 1) 15%, hsla(192.8, 73.21%, 43.92%, 0) 80%),
+    linear-gradient(245deg, hsla(240, 60.83%, 52.94%, 1) 100%, hsla(240, 60.83%, 52.94%, 0) 70%);
+          }
+    textarea {
+            width: 60%;
+            height: 150px;
+            padding: 12px 20px;
+            box-sizing: border-box;
+            /* border: 2px solid #ccc; */
+            border-radius: 4px;
+            /* background-color: #f8f8f8; */
+            font-size: 16px;
+            resize: none;
+            margin: 20px 0;
+            font-family: 'Lora', serif;
+          }
+      .input[type="text"] {
+        width: 100%;
+        /* border: 2px solid #aaa; */
+        border-radius: 4px;
+        margin: 8px 0;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: 0.3s;
+        font-family: 'Lora', serif;
+        
+      }
+      
+      .input[type="text"]:focus {
+        border-color: dodgerBlue;
+        box-shadow: 0 0 8px 0 dodgerBlue;
+      }
+      
+      .inputWithIcon .input[type="text"] {
+        padding-left: 40px;
+      }
+      
+      .inputWithIcon {
+        position: relative;
+      }
+      
+      .inputWithIcon i {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        padding: 9px 8px;
+        color: #aaa;
+        transition: 0.3s;
+      }
+      
+      .inputWithIcon .input[type="text"]:focus + i {
+        color: dodgerBlue;
+      }
+      
+      .inputWithIcon.inputIconBg i {
+        background-color: #aaa;
+        color: #fff;
+        padding: 9px 4px;
+        border-radius: 4px 0 0 4px;
+      }
+      
+      .inputWithIcon.inputIconBg .input[type="text"]:focus + i {
+        color: #fff;
+        background-color: dodgerBlue;
+      }
+      /*aaaaaaaaaaaaaaaaaaaaaaaaaaa*/
+
+            .input[type="tel"] {
+        width: 100%;
+        /* border: 2px solid #aaa; */
+        border-radius: 4px;
+        margin: 8px 0;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: 0.3s;
+        font-family: 'Lora', serif;
+        
+      }
+      
+      .input[type="tel"]:focus {
+        border-color: dodgerBlue;
+        box-shadow: 0 0 8px 0 dodgerBlue;
+      }
+      
+      .inputWithIcon .input[type="tel"] {
+        padding-left: 40px;
+      }
+      
+      .inputWithIcon {
+        position: relative;
+      }
+      
+      .inputWithIcon i {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        padding: 9px 8px;
+        color: #aaa;
+        transition: 0.3s;
+      }
+      
+      .inputWithIcon .input[type="tel"]:focus + i {
+        color: dodgerBlue;
+      }
+      
+      .inputWithIcon.inputIconBg i {
+        background-color: #aaa;
+        color: #fff;
+        padding: 9px 4px;
+        border-radius: 4px 0 0 4px;
+      }
+      
+      .inputWithIcon.inputIconBg .input[type="tel"]:focus + i {
+        color: #fff;
+        background-color: dodgerBlue;
+      }
+      /*bbbbbbbbbbbbbbbbbb*/
+
+      .input[type="email"] {
+        width: 100%;
+        /* border: 2px solid #aaa; */
+        border-radius: 4px;
+        margin: 8px 0;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: 0.3s;
+        font-family: 'Lora', serif;
+        
+      }
+      
+      .input[type="email"]:focus {
+        border-color: dodgerBlue;
+        box-shadow: 0 0 8px 0 dodgerBlue;
+      }
+      
+      .inputWithIcon .input[type="email"] {
+        padding-left: 40px;
+      }
+      
+      .inputWithIcon {
+        position: relative;
+      }
+      
+      .inputWithIcon i {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        padding: 9px 8px;
+        color: #aaa;
+        transition: 0.3s;
+      }
+      
+      .inputWithIcon .input[type="email"]:focus + i {
+        color: dodgerBlue;
+      }
+      
+      .inputWithIcon.inputIconBg i {
+        background-color: #aaa;
+        color: #fff;
+        padding: 9px 4px;
+        border-radius: 4px 0 0 4px;
+      }
+      
+      .inputWithIcon.inputIconBg .input[type="email"]:focus + i {
+        color: #fff;
+        background-color: dodgerBlue;
+      }
+      /*cccccccccc*/
+
+      .input[type="date"] {
+        width: 100%;
+        /* border: 2px solid #aaa; */
+        border-radius: 4px;
+        margin: 8px 0;
+        outline: none;
+        padding: 8px;
+        box-sizing: border-box;
+        transition: 0.3s;
+        font-family: 'Lora', serif;
+        
+      }
+      
+      .input[type="date"]:focus {
+        border-color: dodgerBlue;
+        box-shadow: 0 0 8px 0 dodgerBlue;
+      }
+      
+      .inputWithIcon .input[type="date"] {
+        padding-left: 40px;
+      }
+      
+      .inputWithIcon {
+        position: relative;
+      }
+      
+      .inputWithIcon i {
+        position: absolute;
+        left: 0;
+        top: 8px;
+        padding: 9px 8px;
+        color: #aaa;
+        transition: 0.3s;
+      }
+      
+      .inputWithIcon .input[type="date"]:focus + i {
+        color: dodgerBlue;
+      }
+      
+      .inputWithIcon.inputIconBg i {
+        background-color: #aaa;
+        color: #fff;
+        padding: 9px 4px;
+        border-radius: 4px 0 0 4px;
+      }
+      
+      .inputWithIcon.inputIconBg .input[type="date"]:focus + i {
+        color: #fff;
+        background-color: dodgerBlue;
+      }
+        </style>
+  <style>
+    .dropdown-menu{
+      display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+    }
+    .dropdown-menu a{
+      color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+    }
+    .dropdown-menu a:hover {
+      background-color: #c2c2a3;
+    }
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+}
+    .img-profile {
+    width: 170px;
+    height: 200px;
+    border-radius: 8px;
+    margin: 10px;
+    border: solid 2px #E0e0e0;
+}
+.img-profile::before{
+  background-color: white;
+}
+button{
+    margin:10px;
+    padding: 8px 20px;
+    /* margin: 8px 0; */
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    /* box-sizing: border-box; */
+    font-family: 'Lora', serif;
+}
+b{
+  font-family: 'Lora', serif;
+  }
+  body{
+  background:	#f4f5f7;
+          }
+  </style>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script>
+    $("#tn").val("aa")
+    var script_url = "https://script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec"; //app form
+    var script_url2 = "https://script.google.com/macros/s/AKfycbx11chHd4HssEp2hg_66KlJfrm2u5zd4dDbLmLCxGAa0ymMyoU3/exec"; //app form
+    // Make an AJAX call to Google Script
+    var a, b, c, d = "";
+    function insert_value() {
+      $("#re").css("visibility", "hidden");
+      document.getElementById("loader").style.visibility = "visible";
+      $('#mySpinner').addClass('spinner');
+      var id1 = $("#id").val();
+      var tn = $("#tn").val();
+      var name = $("#name").val();
+      var lname = $("#lname").val();
+      var dob = $("#dob").val();
+      var tel = $("#tel").val();
+      var fb = $("#fb").val();
+      var line = $("#line").val();
+      var ig = $("#ig").val();
+      var aic = $("#aic").val();
+      var ca = $("#ca").val();
+      var ei = $("#ei").val();
+      var gpa = $("#gpa").val();
+      var sp = $("#sp").val();
+      var tfp = $("#tfp").val();
+      var spack = $("#spack").val();
+      var mail = $("#mail").val();
+      var git = $("#git").val();
+      var link = $("#link").val();
+      var major = $("#major").val();
+      var minor = $("#minor").val();
+      var about = $("#about").val();
+      var pic = $("#pic").val();
+      var exp = $("#exp").val();
+      var ref = $("#ref").val();
+      var token = $("#token").val();
+      var height = $("#height").val();
+      var weight = $("#weight").val();
+      var age = $("#age").val();
+      var job = $("#job").val();
+      var sal = $("#sal").val();
+      var db = $("#db").val();
+      var os = $("#os").val();
+      var cen = $("#cen").val();
+      var job_l = $("#job_l").val();
+      var swd = $("#swd").val();
+      var dop = $("#dop").val();
+      var cs = $("#cs").val();
+
+      var port = "";
+      var url = script_url + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&action=insert";
+      a = os;
+      b = db;
+      c = job;
+      d = job_l;
+      document.getElementById("database").value = a
+      document.getElementById("oper").value = b
+      document.getElementById("cur_job").value = c
+      document.getElementById("job_lawa").value = d
+      var request = jQuery.ajax({
+        crossDomain: true,
+        url: url,
+        method: "GET",
+        dataType: "jsonp"
+      });
+      insert_value_2()
+    }
+    function insert_value_2() {
+      $("#re").css("visibility", "hidden");
+      document.getElementById("loader").style.visibility = "visible";
+      $('#mySpinner').addClass('spinner');
+      var id1 = $("#id").val();
+      var tn = $("#tn").val();
+      var name = $("#name").val();
+      var lname = $("#lname").val();
+      var dob = $("#dob").val();
+      var tel = $("#tel").val();
+      var fb = $("#fb").val();
+      var line = $("#line").val();
+      var ig = $("#ig").val();
+      var aic = $("#aic").val();
+      var ca = $("#ca").val();
+      var ei = $("#ei").val();
+      var gpa = $("#gpa").val();
+      var sp = $("#sp").val();
+      var tfp = $("#tfp").val();
+      var spack = $("#spack").val();
+      var mail = $("#mail").val();
+      var git = $("#git").val();
+      var link = $("#link").val();
+      var major = $("#major").val();
+      var minor = $("#minor").val();
+      var about = $("#about").val();
+      var pic = $("#pic").val();
+      var exp = $("#exp").val();
+      var ref = $("#ref").val();
+      var token = $("#token").val();
+      var height = $("#height").val();
+      var weight = $("#weight").val();
+      var age = $("#age").val();
+      var job = $("#job").val();
+      var sal = $("#sal").val();
+      var db = $("#db").val();
+      var os = $("#os").val();
+      var cen = $("#cen").val();
+      var job_l = $("#job_l").val();
+      var swd = $("#swd").val();
+      var dop = $("#dop").val();
+      var cs = $("#cs").val();
+      var port = $("#port").val();
+      var status = "insert"
+      var url = script_url2 + "?callback&name=" + name + "&id=" + id1 + "&lname=" + lname + "&tn=" + tn + "&dob=" + dob + "&tel=" + tel + "&fb=" + fb + "&line=" + line + "&ig=" + ig + "&aic=" + aic + "&ca=" + ca + "&ei=" + ei + "&gpa=" + gpa + "&sp=" + sp + "&tfp=" + tfp + "&spack=" + spack + "&mail=" + mail + "&git=" + git + "&link=" + link + "&major=" + major + "&minor=" + minor + "&about=" + about + "&pic=" + pic + "&exp=" + exp + "&ref=" + ref + "&token=" + token + "&height=" + height + "&weight=" + weight + "&age=" + age + "&job=" + job + "&sal=" + sal + "&db=" + db + "&os=" + os + "&cen=" + cen + "&job_l=" + job_l + "&swd=" + swd + "&dop=" + dop + "&cs=" + cs + "&port=" + port + "&status=" + status + "&action=insert";
+      var request = jQuery.ajax({
+        crossDomain: true,
+        url: url,
+        method: "GET",
+        dataType: "jsonp"
+      });
+    }
+  </script>
+
+</head>
+
+<body>
+  <!-- style="bgcolor:#673AB7" -->
+  <div align="center">
+    <article>
+      <header>
+        <!-- <h1 style="margin:30px;"><strong style="color:white">Application form for register</strong></h1> -->
+        <br>
+        <h1>
+          <p style="color:white"><strong style="color:white">Application form for register</strong></p>
+        </h1>
+        <br>
+      </header>
+    </article>
+  </div>
+  <!-- <p style="color:white">This is simple application<p> -->
+  <nav style="background:white;border: none;box-shadow: 0px 15px 20px -15px rgba(0,0,0,0.3);" class="navbar navbar-default">
+    <div class="container">
+      <!-- Brand and toggle get grouped for better mobile display -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+          aria-expanded="false">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <!-- <a class="navbar-brand" href="insert.html">ECS</a> -->
+      </div>
+
+      <!-- Collect the nav links, forms, and other content for toggling -->
+      <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+        <ul class="nav navbar-nav">
+          <li class="active"><a href="index.html"><i style="margin-right:10px" class="fa fa-address-book"></i>Register
+            </a></li>
+          <li><a href="update.html"><i style="margin-right:10px" class="fa fa-edit"></i>Edit
+            </a></li>
+          <li><a href="delete.html"><i style="margin-right:10px" class="fa fa-remove"></i>Delete
+            </a></li>
+          <li><a href="login.html"><i style="margin-right:10px" class="fa fa-sign-in"></i>Login
+            </a></li>
+          </li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+  <div align="left">
+    <!-- //class="container-bg" -->
+    <form id="myForm" name="myForm" action="mailer.php" method="POST" onsubmit="javascript:insert_value()" enctype="multipart/form-data">
+      <!-- <label>ID :</label> -->
+      <input type="hidden" name="id" id="id" required></input>
+      <input type="hidden" name="token" id="token" required></input>
+      <input type="hidden" name="cur_job" id="cur_job"></input>
+      <input type="hidden" name="database" id="database"></input>
+      <input type="hidden" name="oper" id="oper"></input>
+      <input type="hidden" name="job_lawa" id="job_lawa"></input>
+      <label type="hidden"></label>
+      <!-- <label id="id" name="id"></label><br> -->
+  </div>
+  <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+          <b style="font-size: 20px;">Personal Information</b>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" align="center">
+        <label><b style="color:red">* </b>Your picture </label><br>
+        <div>
+          <img id="picpreview" class="img-profile" src="uploads/asdasd.PNG" alt="">
+          <!-- <img id="blah" src="#" alt="your image" class="img-profile" /> -->
+        </div>
+        <input type="file" name="files[]" id="pic" multiple></input>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Title Name : </label><br>
+        <select name="tn" id="tn" style="margin: 8px 0;margin-left: 1px;font-family: 'Lora', serif;">
+          <option value="">Select</option>
+          <option value="Mr.">Mr.</option>
+          <option value="Ms.">Ms.</option>
+          <option value="Mrs.">Mrs.</option>
+        </select>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label><b style="color:red">* </b>First Name : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="name" id="name" placeholder="Enter your first name" onkeypress="return isCharKey(event)"
+            onchange="return checkName()" maxlength="30" required></input>
+          <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label><b style="color:red">* </b>Last Name : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="lname" id="lname" placeholder="Enter your last name" onkeypress="return isCharKey(event)"
+            onchange="return checkLname()" maxlength="30" required></input>
+          <i class="fa fa-user fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Date of birth : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="date" name="dob" id="dob" max="2100-12-31"></input>
+          <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Height : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="height" id="height" placeholder="Enter your Height " onkeypress="return isNumberKey(event)"
+            maxlength="5"></input>
+          <i class="fa fa-text-height fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Weight : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="weight" id="weight" placeholder="Enter your Weight" onkeypress="return isNumberKey(event)"
+            maxlength="5"></input>
+          <i class="fas fa-weight fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Age : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="age" id="age" placeholder="Enter your Age" onkeypress="return isNumberKey(event)"
+            maxlength="3"></input>
+          <i class="fas fa-birthday-cake fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label><b style="color:red">* </b>Position : </label><br>
+        <div class="inputWithIcon">
+          <!-- <input class="input" type="text" name="pos" id="pos" placeholder="Enter your Position" onkeypress="return isCharKey(event)"
+                    onchange="return checkLname()" maxlength="30" ></input>
+                  <i class="fa fa-group fa-lg fa-fw" aria-hidden="true"></i> -->
+          <div id="mySelect_job" name="mySelect_job"></div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Salary : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="sal" id="sal" placeholder="Enter your Salary" onkeypress="return isNumberKey(event)"
+            maxlength="30"></input>
+          <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+          <b style="font-size: 20px;">Education</b>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Educational institution : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="ei" id="ei" placeholder="Enter your University" onkeypress="return isCharKey(event)"
+            onchange="return checku()" maxlength="40"></input>
+          <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Major : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="major" id="major" placeholder="Enter your Major" onkeypress="return isCharKey(event)"
+            onchange="return checkmajor()" maxlength="40"></input>
+          <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Minor : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="minor" id="minor" placeholder="Enter your Minor" onkeypress="return isCharKey(event)"
+            onchange="return checkminor()" maxlength="40"></input>
+          <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>GPAX : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="gpa" id="gpa" placeholder="Enter GPA" onkeypress="return isNumberKey(event)"
+            maxlength="4"></input>
+          <i class="fa fa-graduation-cap fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+          <b style="font-size: 20px;">Contact</b>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label><b style="color:red">* </b>Telephone Number : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="tel" name="tel" id="tel" placeholder="0213456789" maxlength="10" onkeypress="return isNumberKey(event)"
+            onchange="return checktel()" required></input>
+          <i class="fa fa-phone fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label><b style="color:red">* </b>Email Address : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="email" name="mail" id="mail" placeholder="Enter E-mail  address" onchange="return checkmail()"
+            onchange="validateEmail()" required></input>
+          <!-- <button type='button' id='validate' onclick="validateEmail()">Validate!</button> -->
+          <!-- <h2 id='result'></h2> -->
+          <i class="fa fa-envelope fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Address in ID Card : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="aic" id="aic" placeholder="Enter your address"></input>
+          <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Current Address : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="ca" id="ca" placeholder="Enter your address"></input>
+          <i class="fa fa-address-card fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Reference : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="ref" id="ref" placeholder="Enter Who can Reference for you" onkeypress="return isCharKey(event)"
+            onchange="return checkref()"></input>
+          <i class="fa fa-user-circle fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+          <b style="font-size: 20px;">Computer Skill</b>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <div class="example example_typeahead inputWithIcon " style="margin-left:-8px;">
+          <label>Programing language : </label><br>
+          <div class="inputWithIcon bs-example">
+            <input class="input" type="text" name="sp" id="sp"></input><br>
+            <i style="margin-left:2px;" class="fa fa-code fa-lg fa-fw" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Software Package : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="spack" id="spack" placeholder="ORACLE Etc." onkeypress="return isCharKey(event)"
+            onchange="return checkpack()" maxlength="40"></input>
+          <i class="fa fa-desktop fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Tool for development : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="tfp" id="tfp" placeholder="Vscode Etc." onkeypress="return isCharKey(event)"
+            onchange="return checktool()" maxlength="40"></input>
+          <i class="fa fa-cog fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Database : </label><br>
+        <div class="inputWithIcon">
+          <!-- <input class="input" type="text" name="db" id="db" placeholder="MongoDB Etc." onkeypress="return isCharKey(event)"
+              onchange="return checktool()" maxlength="40" ></input> -->
+          <!-- <input class="input" data-list="CSS, JavaScript, HTML, SVG, ARIA, MathML" id="bb" name="bb" onchange="javascript: cc(this.value);"
+           data-multiple="" data-minchars="1" autocomplete="off" aria-expanded="false" aria-owns="awesomplete_list_2" role="combobox" ></input> -->
+          <div id="mySelect_db" name="mySelect_db"></div>
+          <!-- <i class="fa fa-database fa-lg fa-fw" aria-hidden="true"></i> -->
+        </div>
+        <!-- <div id="mySelect_db" name="mySelect_db"></div> -->
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Operating System : </label><br>
+        <div class="inputWithIcon">
+          <div id="mySelect_os" name="mySelect_os"></div>
+          <!-- <i class="fa fa-desktop fa-lg fa-fw" aria-hidden="true"></i> -->
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+          <b style="font-size: 20px;">Social</b>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Facebook : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="fb" id="fb" placeholder="Enter your facebook id"></input>
+          <i class="fa fa-facebook-official fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Line : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="line" id="line" placeholder="Enter your id line"></input>
+          <i class="fab fa-line fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Instagram : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="ig" id="ig" placeholder="Enter your Instagram"></input>
+          <i class="fa fa-instagram fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Github: </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="git" id="git" placeholder="Enter your Github"></input>
+          <i class="fa fa-github fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Linkedin: </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="link" id="link" placeholder="Enter your Linkedin"></input>
+          <i class="fa fa-linkedin-square fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="border: solid 2px #E0e0e0;background-color: white;">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border-bottom: solid 2px #E0e0e0;">
+          <b style="font-size: 20px;">Work Experiece</b>
+        </div>
+      </div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Current enterprise : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="cen" id="cen" placeholder="Enter your Current enterprise"></input>
+          <i class="fa fa-university fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label><b style="color:red">* </b>Working position : </label><br>
+        <div class="inputWithIcon">
+          <!-- <input class="input" type="text" name="wpos" id="wpos" placeholder="Enter your Linkedin"></input>
+                <i class="fa fa-group fa-lg fa-fw" aria-hidden="true"></i> -->
+          <div id="mySelect_job_l" name="mySelect_job_l"></div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Start work date : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="date" name="swd" id="swd" max="2100-12-31"></input>
+          <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Date of departure : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="date" name="dop" id="dop" max="2100-12-31"></input>
+          <i class="fa fa-calendar fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+        <label>Current salary : </label><br>
+        <div class="inputWithIcon">
+          <input class="input" type="text" name="cs" id="cs" placeholder="Enter your Salary"></input>
+          <i class="fa fa-money fa-lg fa-fw" aria-hidden="true"></i>
+        </div>
+      </div>
+      <!-- <div class="col-12 col-sm-4 col-md-4 col-lg-4 col-xl-4">
+          <label>Portfolio : </label><br>
+          <input type="file" name="file" id="port" multiple></input>
+      </div> -->
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <label>About you : </label><br>
+        <textarea style="margin: 10px;margin-left: -1px;" name="about" id="about" placeholder="such as I'm newbie programmer"
+          onchange="return checkabout()"></textarea>
+      </div>
+      <div class="col-12 col-sm-6 col-md-6 col-lg-6 col-xl-6">
+        <label>Experiece : </label><br>
+        <textarea style="margin: 10px;margin-left: -1px;" name="exp" id="exp" placeholder="Enter your Experiece"
+          onchange="return checkexp()"></textarea><br>
+      </div>
+
+
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+          <br>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12" style="border: solid 2px #E0e0e0;background-color: white;"><br>
+        <div class="container-fluid" align="center">
+          <!-- <p id="re"></p> -->
+          <button class="btn-primary" style="margin-right: 15px;" type="submit" id="b1" value="Insert"><i style="margin-right:5px"
+              class="fa fa-edit"></i>Submit</button>
+          <button class="btn-warning" style="margin-left: 15px;" type="button" id="c1" value="Cancle" onclick="back()"><i
+              style="margin-right:5px" class="fa fa-remove"></i>Cancle</button><br><br>
+          <div id="loader" hidden></div>
+        </div>
+      </div>
+    </div>
+    </form>
+  </div>
+
+</body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
 <script>
+  function validateEmail(email) {
+    var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    return re.test(email);
+  }
 
-  document.write(unescape("%3Chtml%3E%0A%0A%3Chead%3E%0A%0A%20%20%3Cmeta%20name%3D%22viewport%22%20content%3D%22width%3Ddevice-width%2C%20initial-scale%3D1%22%3E%0A%20%20%3Clink%20href%3D%22https%3A//fonts.googleapis.com/css%3Ffamily%3DLora%22%20rel%3D%22stylesheet%22%3E%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22css/edit.css%22%3E%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22css/bootstrap-grid.css%22%3E%0A%20%20%3C%21--%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22css/bootstrap.css%22%3E%20--%3E%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22css/bootstrap.css%22%3E%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22css/bootstrap.min.css%22%3E%0A%20%20%3Clink%20href%3D%22css/multiple-select.css%22%20rel%3D%22stylesheet%22%20/%3E%0A%20%20%3Clink%20rel%3D%22shortcut%20icon%22%20type%3D%22image/png%22%20href%3D%22img/favicon.png%22%20/%3E%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22css/bootstrap-tagsinput.css%22%3E%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22assets/app.css%22%3E%0A%20%20%3Clink%20rel%3D%22stylesheet%22%20href%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css%22%3E%0A%20%20%3Clink%20rel%3D%27stylesheet%27%20href%3D%27https%3A//use.fontawesome.com/releases/v5.5.0/css/all.css%27%20integrity%3D%27sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU%27%0A%20%20%20%20crossorigin%3D%27anonymous%27%3E%0A%20%20%3Clink%20rel%3D%27stylesheet%27%20href%3D%27https%3A//maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css%27%3E%0A%20%20%3Ctitle%3EForm%20register%3C/title%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20header%7B%0A%20%20%20%20%20%20background%3A%0A%20%20%20%20-webkit-linear-gradient%2865deg%2C%20hsla%28176.64%2C%2068.42%25%2C%2059.02%25%2C%201%29%2010%25%2C%20hsla%28176.64%2C%2068.42%25%2C%2059.02%25%2C%200%29%2080%25%29%2C%0A%20%20%20%20-webkit-linear-gradient%28135deg%2C%20hsla%28192.8%2C%2073.21%25%2C%2043.92%25%2C%201%29%2015%25%2C%20hsla%28192.8%2C%2073.21%25%2C%2043.92%25%2C%200%29%2080%25%29%2C%0A%20%20%20%20-webkit-linear-gradient%28205deg%2C%20hsla%28240%2C%2060.83%25%2C%2052.94%25%2C%201%29%20100%25%2C%20hsla%28240%2C%2060.83%25%2C%2052.94%25%2C%200%29%2070%25%29%3B%0A%20%20%20%20%20%20background%3A%0A%20%20%20%20linear-gradient%2825deg%2C%20hsla%28176.64%2C%2068.42%25%2C%2059.02%25%2C%201%29%2010%25%2C%20hsla%28176.64%2C%2068.42%25%2C%2059.02%25%2C%200%29%2080%25%29%2C%0A%20%20%20%20linear-gradient%28315deg%2C%20hsla%28192.8%2C%2073.21%25%2C%2043.92%25%2C%201%29%2015%25%2C%20hsla%28192.8%2C%2073.21%25%2C%2043.92%25%2C%200%29%2080%25%29%2C%0A%20%20%20%20linear-gradient%28245deg%2C%20hsla%28240%2C%2060.83%25%2C%2052.94%25%2C%201%29%20100%25%2C%20hsla%28240%2C%2060.83%25%2C%2052.94%25%2C%200%29%2070%25%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20footer%7B%0A%20%20%20%20%20%20background%3A%0A%20%20%20%20-webkit-linear-gradient%2865deg%2C%20hsla%28176.64%2C%2068.42%25%2C%2059.02%25%2C%201%29%2010%25%2C%20hsla%28176.64%2C%2068.42%25%2C%2059.02%25%2C%200%29%2080%25%29%2C%0A%20%20%20%20-webkit-linear-gradient%28135deg%2C%20hsla%28192.8%2C%2073.21%25%2C%2043.92%25%2C%201%29%2015%25%2C%20hsla%28192.8%2C%2073.21%25%2C%2043.92%25%2C%200%29%2080%25%29%2C%0A%20%20%20%20-webkit-linear-gradient%28205deg%2C%20hsla%28240%2C%2060.83%25%2C%2052.94%25%2C%201%29%20100%25%2C%20hsla%28240%2C%2060.83%25%2C%2052.94%25%2C%200%29%2070%25%29%3B%0A%20%20%20%20%20%20background%3A%0A%20%20%20%20linear-gradient%2825deg%2C%20hsla%28176.64%2C%2068.42%25%2C%2059.02%25%2C%201%29%2010%25%2C%20hsla%28176.64%2C%2068.42%25%2C%2059.02%25%2C%200%29%2080%25%29%2C%0A%20%20%20%20linear-gradient%28315deg%2C%20hsla%28192.8%2C%2073.21%25%2C%2043.92%25%2C%201%29%2015%25%2C%20hsla%28192.8%2C%2073.21%25%2C%2043.92%25%2C%200%29%2080%25%29%2C%0A%20%20%20%20linear-gradient%28245deg%2C%20hsla%28240%2C%2060.83%25%2C%2052.94%25%2C%201%29%20100%25%2C%20hsla%28240%2C%2060.83%25%2C%2052.94%25%2C%200%29%2070%25%29%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20textarea%20%7B%0A%20%20%20%20%20%20%20%20%20%20%20%20width%3A%2060%25%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20height%3A%20150px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20padding%3A%2012px%2020px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20box-sizing%3A%20border-box%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20/*%20border%3A%202px%20solid%20%23ccc%3B%20*/%0A%20%20%20%20%20%20%20%20%20%20%20%20border-radius%3A%204px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20/*%20background-color%3A%20%23f8f8f8%3B%20*/%0A%20%20%20%20%20%20%20%20%20%20%20%20font-size%3A%2016px%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20resize%3A%20none%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20margin%3A%2020px%200%3B%0A%20%20%20%20%20%20%20%20%20%20%20%20font-family%3A%20%27Lora%27%2C%20serif%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20.input%5Btype%3D%22text%22%5D%20%7B%0A%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20/*%20border%3A%202px%20solid%20%23aaa%3B%20*/%0A%20%20%20%20%20%20%20%20border-radius%3A%204px%3B%0A%20%20%20%20%20%20%20%20margin%3A%208px%200%3B%0A%20%20%20%20%20%20%20%20outline%3A%20none%3B%0A%20%20%20%20%20%20%20%20padding%3A%208px%3B%0A%20%20%20%20%20%20%20%20box-sizing%3A%20border-box%3B%0A%20%20%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%20%20%20%20font-family%3A%20%27Lora%27%2C%20serif%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.input%5Btype%3D%22text%22%5D%3Afocus%20%7B%0A%20%20%20%20%20%20%20%20border-color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%20%20box-shadow%3A%200%200%208px%200%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20.input%5Btype%3D%22text%22%5D%20%7B%0A%20%20%20%20%20%20%20%20padding-left%3A%2040px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20i%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20%20%20top%3A%208px%3B%0A%20%20%20%20%20%20%20%20padding%3A%209px%208px%3B%0A%20%20%20%20%20%20%20%20color%3A%20%23aaa%3B%0A%20%20%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20.input%5Btype%3D%22text%22%5D%3Afocus%20+%20i%20%7B%0A%20%20%20%20%20%20%20%20color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon.inputIconBg%20i%20%7B%0A%20%20%20%20%20%20%20%20background-color%3A%20%23aaa%3B%0A%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20padding%3A%209px%204px%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%204px%200%200%204px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon.inputIconBg%20.input%5Btype%3D%22text%22%5D%3Afocus%20+%20i%20%7B%0A%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20background-color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20/*aaaaaaaaaaaaaaaaaaaaaaaaaaa*/%0A%0A%20%20%20%20%20%20%20%20%20%20%20%20.input%5Btype%3D%22tel%22%5D%20%7B%0A%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20/*%20border%3A%202px%20solid%20%23aaa%3B%20*/%0A%20%20%20%20%20%20%20%20border-radius%3A%204px%3B%0A%20%20%20%20%20%20%20%20margin%3A%208px%200%3B%0A%20%20%20%20%20%20%20%20outline%3A%20none%3B%0A%20%20%20%20%20%20%20%20padding%3A%208px%3B%0A%20%20%20%20%20%20%20%20box-sizing%3A%20border-box%3B%0A%20%20%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%20%20%20%20font-family%3A%20%27Lora%27%2C%20serif%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.input%5Btype%3D%22tel%22%5D%3Afocus%20%7B%0A%20%20%20%20%20%20%20%20border-color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%20%20box-shadow%3A%200%200%208px%200%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20.input%5Btype%3D%22tel%22%5D%20%7B%0A%20%20%20%20%20%20%20%20padding-left%3A%2040px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20i%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20%20%20top%3A%208px%3B%0A%20%20%20%20%20%20%20%20padding%3A%209px%208px%3B%0A%20%20%20%20%20%20%20%20color%3A%20%23aaa%3B%0A%20%20%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20.input%5Btype%3D%22tel%22%5D%3Afocus%20+%20i%20%7B%0A%20%20%20%20%20%20%20%20color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon.inputIconBg%20i%20%7B%0A%20%20%20%20%20%20%20%20background-color%3A%20%23aaa%3B%0A%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20padding%3A%209px%204px%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%204px%200%200%204px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon.inputIconBg%20.input%5Btype%3D%22tel%22%5D%3Afocus%20+%20i%20%7B%0A%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20background-color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20/*bbbbbbbbbbbbbbbbbb*/%0A%0A%20%20%20%20%20%20.input%5Btype%3D%22email%22%5D%20%7B%0A%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20/*%20border%3A%202px%20solid%20%23aaa%3B%20*/%0A%20%20%20%20%20%20%20%20border-radius%3A%204px%3B%0A%20%20%20%20%20%20%20%20margin%3A%208px%200%3B%0A%20%20%20%20%20%20%20%20outline%3A%20none%3B%0A%20%20%20%20%20%20%20%20padding%3A%208px%3B%0A%20%20%20%20%20%20%20%20box-sizing%3A%20border-box%3B%0A%20%20%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%20%20%20%20font-family%3A%20%27Lora%27%2C%20serif%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.input%5Btype%3D%22email%22%5D%3Afocus%20%7B%0A%20%20%20%20%20%20%20%20border-color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%20%20box-shadow%3A%200%200%208px%200%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20.input%5Btype%3D%22email%22%5D%20%7B%0A%20%20%20%20%20%20%20%20padding-left%3A%2040px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20i%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20%20%20top%3A%208px%3B%0A%20%20%20%20%20%20%20%20padding%3A%209px%208px%3B%0A%20%20%20%20%20%20%20%20color%3A%20%23aaa%3B%0A%20%20%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20.input%5Btype%3D%22email%22%5D%3Afocus%20+%20i%20%7B%0A%20%20%20%20%20%20%20%20color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon.inputIconBg%20i%20%7B%0A%20%20%20%20%20%20%20%20background-color%3A%20%23aaa%3B%0A%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20padding%3A%209px%204px%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%204px%200%200%204px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon.inputIconBg%20.input%5Btype%3D%22email%22%5D%3Afocus%20+%20i%20%7B%0A%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20background-color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20/*cccccccccc*/%0A%0A%20%20%20%20%20%20.input%5Btype%3D%22date%22%5D%20%7B%0A%20%20%20%20%20%20%20%20width%3A%20100%25%3B%0A%20%20%20%20%20%20%20%20/*%20border%3A%202px%20solid%20%23aaa%3B%20*/%0A%20%20%20%20%20%20%20%20border-radius%3A%204px%3B%0A%20%20%20%20%20%20%20%20margin%3A%208px%200%3B%0A%20%20%20%20%20%20%20%20outline%3A%20none%3B%0A%20%20%20%20%20%20%20%20padding%3A%208px%3B%0A%20%20%20%20%20%20%20%20box-sizing%3A%20border-box%3B%0A%20%20%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%20%20%20%20font-family%3A%20%27Lora%27%2C%20serif%3B%0A%20%20%20%20%20%20%20%20%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.input%5Btype%3D%22date%22%5D%3Afocus%20%7B%0A%20%20%20%20%20%20%20%20border-color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%20%20box-shadow%3A%200%200%208px%200%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20.input%5Btype%3D%22date%22%5D%20%7B%0A%20%20%20%20%20%20%20%20padding-left%3A%2040px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20relative%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20i%20%7B%0A%20%20%20%20%20%20%20%20position%3A%20absolute%3B%0A%20%20%20%20%20%20%20%20left%3A%200%3B%0A%20%20%20%20%20%20%20%20top%3A%208px%3B%0A%20%20%20%20%20%20%20%20padding%3A%209px%208px%3B%0A%20%20%20%20%20%20%20%20color%3A%20%23aaa%3B%0A%20%20%20%20%20%20%20%20transition%3A%200.3s%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon%20.input%5Btype%3D%22date%22%5D%3Afocus%20+%20i%20%7B%0A%20%20%20%20%20%20%20%20color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon.inputIconBg%20i%20%7B%0A%20%20%20%20%20%20%20%20background-color%3A%20%23aaa%3B%0A%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20padding%3A%209px%204px%3B%0A%20%20%20%20%20%20%20%20border-radius%3A%204px%200%200%204px%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%0A%20%20%20%20%20%20.inputWithIcon.inputIconBg%20.input%5Btype%3D%22date%22%5D%3Afocus%20+%20i%20%7B%0A%20%20%20%20%20%20%20%20color%3A%20%23fff%3B%0A%20%20%20%20%20%20%20%20background-color%3A%20dodgerBlue%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20%20%20%3C/style%3E%0A%20%20%3Cstyle%3E%0A%20%20%20%20.dropdown-menu%7B%0A%20%20%20%20%20%20display%3A%20none%3B%0A%20%20position%3A%20absolute%3B%0A%20%20background-color%3A%20%23f1f1f1%3B%0A%20%20min-width%3A%20160px%3B%0A%20%20box-shadow%3A%200px%208px%2016px%200px%20rgba%280%2C0%2C0%2C0.2%29%3B%0A%20%20z-index%3A%201%3B%0A%20%20%20%20%7D%0A%20%20%20%20.dropdown-menu%20a%7B%0A%20%20%20%20%20%20color%3A%20black%3B%0A%20%20padding%3A%2012px%2016px%3B%0A%20%20text-decoration%3A%20none%3B%0A%20%20display%3A%20block%3B%0A%20%20%20%20%7D%0A%20%20%20%20.dropdown-menu%20a%3Ahover%20%7B%0A%20%20%20%20%20%20background-color%3A%20%23c2c2a3%3B%0A%20%20%20%20%7D%0A%0A.dropdown%3Ahover%20.dropdown-menu%20%7B%0A%20%20display%3A%20block%3B%0A%7D%0A%20%20%20%20.img-profile%20%7B%0A%20%20%20%20width%3A%20170px%3B%0A%20%20%20%20height%3A%20200px%3B%0A%20%20%20%20border-radius%3A%208px%3B%0A%20%20%20%20margin%3A%2010px%3B%0A%20%20%20%20border%3A%20solid%202px%20%23E0e0e0%3B%0A%7D%0A.img-profile%3A%3Abefore%7B%0A%20%20background-color%3A%20white%3B%0A%7D%0Abutton%7B%0A%20%20%20%20margin%3A10px%3B%0A%20%20%20%20padding%3A%208px%2020px%3B%0A%20%20%20%20/*%20margin%3A%208px%200%3B%20*/%0A%20%20%20%20display%3A%20inline-block%3B%0A%20%20%20%20border%3A%201px%20solid%20%23ccc%3B%0A%20%20%20%20border-radius%3A%204px%3B%0A%20%20%20%20/*%20box-sizing%3A%20border-box%3B%20*/%0A%20%20%20%20font-family%3A%20%27Lora%27%2C%20serif%3B%0A%7D%0Ab%7B%0A%20%20font-family%3A%20%27Lora%27%2C%20serif%3B%0A%20%20%7D%0A%20%20body%7B%0A%20%20background%3A%09%23f4f5f7%3B%0A%20%20%20%20%20%20%20%20%20%20%7D%0A%20%20%3C/style%3E%0A%20%20%3Cscript%20src%3D%22https%3A//ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js%22%3E%3C/script%3E%0A%20%20%3Cscript%3E%0A%20%20%20%20%24%28%22%23tn%22%29.val%28%22aa%22%29%0A%20%20%20%20var%20script_url%20%3D%20%22https%3A//script.google.com/macros/s/AKfycbxBW4B33KJY1XuZ5nrtWxw9z8yUDLxzVzeY7_1WPq-DUxs3H_bm/exec%22%3B%20//app%20form%0A%20%20%20%20var%20script_url2%20%3D%20%22https%3A//script.google.com/macros/s/AKfycbx11chHd4HssEp2hg_66KlJfrm2u5zd4dDbLmLCxGAa0ymMyoU3/exec%22%3B%20//app%20form%0A%20%20%20%20//%20Make%20an%20AJAX%20call%20to%20Google%20Script%0A%20%20%20%20var%20a%2C%20b%2C%20c%2C%20d%20%3D%20%22%22%3B%0A%20%20%20%20function%20insert_value%28%29%20%7B%0A%20%20%20%20%20%20%24%28%22%23re%22%29.css%28%22visibility%22%2C%20%22hidden%22%29%3B%0A%20%20%20%20%20%20document.getElementById%28%22loader%22%29.style.visibility%20%3D%20%22visible%22%3B%0A%20%20%20%20%20%20%24%28%27%23mySpinner%27%29.addClass%28%27spinner%27%29%3B%0A%20%20%20%20%20%20var%20id1%20%3D%20%24%28%22%23id%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20tn%20%3D%20%24%28%22%23tn%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20name%20%3D%20%24%28%22%23name%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20lname%20%3D%20%24%28%22%23lname%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20dob%20%3D%20%24%28%22%23dob%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20tel%20%3D%20%24%28%22%23tel%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20fb%20%3D%20%24%28%22%23fb%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20line%20%3D%20%24%28%22%23line%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20ig%20%3D%20%24%28%22%23ig%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20aic%20%3D%20%24%28%22%23aic%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20ca%20%3D%20%24%28%22%23ca%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20ei%20%3D%20%24%28%22%23ei%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20gpa%20%3D%20%24%28%22%23gpa%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20sp%20%3D%20%24%28%22%23sp%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20tfp%20%3D%20%24%28%22%23tfp%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20spack%20%3D%20%24%28%22%23spack%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20mail%20%3D%20%24%28%22%23mail%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20git%20%3D%20%24%28%22%23git%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20link%20%3D%20%24%28%22%23link%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20major%20%3D%20%24%28%22%23major%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20minor%20%3D%20%24%28%22%23minor%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20about%20%3D%20%24%28%22%23about%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20pic%20%3D%20%24%28%22%23pic%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20exp%20%3D%20%24%28%22%23exp%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20ref%20%3D%20%24%28%22%23ref%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20token%20%3D%20%24%28%22%23token%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20height%20%3D%20%24%28%22%23height%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20weight%20%3D%20%24%28%22%23weight%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20age%20%3D%20%24%28%22%23age%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20job%20%3D%20%24%28%22%23job%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20sal%20%3D%20%24%28%22%23sal%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20db%20%3D%20%24%28%22%23db%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20os%20%3D%20%24%28%22%23os%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20cen%20%3D%20%24%28%22%23cen%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20job_l%20%3D%20%24%28%22%23job_l%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20swd%20%3D%20%24%28%22%23swd%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20dop%20%3D%20%24%28%22%23dop%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20cs%20%3D%20%24%28%22%23cs%22%29.val%28%29%3B%0A%0A%20%20%20%20%20%20var%20port%20%3D%20%22%22%3B%0A%20%20%20%20%20%20var%20url%20%3D%20script_url%20+%20%22%3Fcallback%26name%3D%22%20+%20name%20+%20%22%26id%3D%22%20+%20id1%20+%20%22%26lname%3D%22%20+%20lname%20+%20%22%26tn%3D%22%20+%20tn%20+%20%22%26dob%3D%22%20+%20dob%20+%20%22%26tel%3D%22%20+%20tel%20+%20%22%26fb%3D%22%20+%20fb%20+%20%22%26line%3D%22%20+%20line%20+%20%22%26ig%3D%22%20+%20ig%20+%20%22%26aic%3D%22%20+%20aic%20+%20%22%26ca%3D%22%20+%20ca%20+%20%22%26ei%3D%22%20+%20ei%20+%20%22%26gpa%3D%22%20+%20gpa%20+%20%22%26sp%3D%22%20+%20sp%20+%20%22%26tfp%3D%22%20+%20tfp%20+%20%22%26spack%3D%22%20+%20spack%20+%20%22%26mail%3D%22%20+%20mail%20+%20%22%26git%3D%22%20+%20git%20+%20%22%26link%3D%22%20+%20link%20+%20%22%26major%3D%22%20+%20major%20+%20%22%26minor%3D%22%20+%20minor%20+%20%22%26about%3D%22%20+%20about%20+%20%22%26pic%3D%22%20+%20pic%20+%20%22%26exp%3D%22%20+%20exp%20+%20%22%26ref%3D%22%20+%20ref%20+%20%22%26token%3D%22%20+%20token%20+%20%22%26height%3D%22%20+%20height%20+%20%22%26weight%3D%22%20+%20weight%20+%20%22%26age%3D%22%20+%20age%20+%20%22%26job%3D%22%20+%20job%20+%20%22%26sal%3D%22%20+%20sal%20+%20%22%26db%3D%22%20+%20db%20+%20%22%26os%3D%22%20+%20os%20+%20%22%26cen%3D%22%20+%20cen%20+%20%22%26job_l%3D%22%20+%20job_l%20+%20%22%26swd%3D%22%20+%20swd%20+%20%22%26dop%3D%22%20+%20dop%20+%20%22%26cs%3D%22%20+%20cs%20+%20%22%26port%3D%22%20+%20port%20+%20%22%26action%3Dinsert%22%3B%0A%20%20%20%20%20%20a%20%3D%20os%3B%0A%20%20%20%20%20%20b%20%3D%20db%3B%0A%20%20%20%20%20%20c%20%3D%20job%3B%0A%20%20%20%20%20%20d%20%3D%20job_l%3B%0A%20%20%20%20%20%20document.getElementById%28%22database%22%29.value%20%3D%20a%0A%20%20%20%20%20%20document.getElementById%28%22oper%22%29.value%20%3D%20b%0A%20%20%20%20%20%20document.getElementById%28%22cur_job%22%29.value%20%3D%20c%0A%20%20%20%20%20%20document.getElementById%28%22job_lawa%22%29.value%20%3D%20d%0A%20%20%20%20%20%20var%20request%20%3D%20jQuery.ajax%28%7B%0A%20%20%20%20%20%20%20%20crossDomain%3A%20true%2C%0A%20%20%20%20%20%20%20%20url%3A%20url%2C%0A%20%20%20%20%20%20%20%20method%3A%20%22GET%22%2C%0A%20%20%20%20%20%20%20%20dataType%3A%20%22jsonp%22%0A%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20insert_value_2%28%29%0A%20%20%20%20%7D%0A%20%20%20%20function%20insert_value_2%28%29%20%7B%0A%20%20%20%20%20%20%24%28%22%23re%22%29.css%28%22visibility%22%2C%20%22hidden%22%29%3B%0A%20%20%20%20%20%20document.getElementById%28%22loader%22%29.style.visibility%20%3D%20%22visible%22%3B%0A%20%20%20%20%20%20%24%28%27%23mySpinner%27%29.addClass%28%27spinner%27%29%3B%0A%20%20%20%20%20%20var%20id1%20%3D%20%24%28%22%23id%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20tn%20%3D%20%24%28%22%23tn%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20name%20%3D%20%24%28%22%23name%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20lname%20%3D%20%24%28%22%23lname%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20dob%20%3D%20%24%28%22%23dob%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20tel%20%3D%20%24%28%22%23tel%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20fb%20%3D%20%24%28%22%23fb%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20line%20%3D%20%24%28%22%23line%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20ig%20%3D%20%24%28%22%23ig%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20aic%20%3D%20%24%28%22%23aic%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20ca%20%3D%20%24%28%22%23ca%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20ei%20%3D%20%24%28%22%23ei%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20gpa%20%3D%20%24%28%22%23gpa%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20sp%20%3D%20%24%28%22%23sp%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20tfp%20%3D%20%24%28%22%23tfp%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20spack%20%3D%20%24%28%22%23spack%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20mail%20%3D%20%24%28%22%23mail%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20git%20%3D%20%24%28%22%23git%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20link%20%3D%20%24%28%22%23link%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20major%20%3D%20%24%28%22%23major%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20minor%20%3D%20%24%28%22%23minor%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20about%20%3D%20%24%28%22%23about%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20pic%20%3D%20%24%28%22%23pic%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20exp%20%3D%20%24%28%22%23exp%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20ref%20%3D%20%24%28%22%23ref%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20token%20%3D%20%24%28%22%23token%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20height%20%3D%20%24%28%22%23height%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20weight%20%3D%20%24%28%22%23weight%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20age%20%3D%20%24%28%22%23age%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20job%20%3D%20%24%28%22%23job%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20sal%20%3D%20%24%28%22%23sal%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20db%20%3D%20%24%28%22%23db%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20os%20%3D%20%24%28%22%23os%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20cen%20%3D%20%24%28%22%23cen%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20job_l%20%3D%20%24%28%22%23job_l%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20swd%20%3D%20%24%28%22%23swd%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20dop%20%3D%20%24%28%22%23dop%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20cs%20%3D%20%24%28%22%23cs%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20port%20%3D%20%24%28%22%23port%22%29.val%28%29%3B%0A%20%20%20%20%20%20var%20status%20%3D%20%22insert%22%0A%20%20%20%20%20%20var%20url%20%3D%20script_url2%20+%20%22%3Fcallback%26name%3D%22%20+%20name%20+%20%22%26id%3D%22%20+%20id1%20+%20%22%26lname%3D%22%20+%20lname%20+%20%22%26tn%3D%22%20+%20tn%20+%20%22%26dob%3D%22%20+%20dob%20+%20%22%26tel%3D%22%20+%20tel%20+%20%22%26fb%3D%22%20+%20fb%20+%20%22%26line%3D%22%20+%20line%20+%20%22%26ig%3D%22%20+%20ig%20+%20%22%26aic%3D%22%20+%20aic%20+%20%22%26ca%3D%22%20+%20ca%20+%20%22%26ei%3D%22%20+%20ei%20+%20%22%26gpa%3D%22%20+%20gpa%20+%20%22%26sp%3D%22%20+%20sp%20+%20%22%26tfp%3D%22%20+%20tfp%20+%20%22%26spack%3D%22%20+%20spack%20+%20%22%26mail%3D%22%20+%20mail%20+%20%22%26git%3D%22%20+%20git%20+%20%22%26link%3D%22%20+%20link%20+%20%22%26major%3D%22%20+%20major%20+%20%22%26minor%3D%22%20+%20minor%20+%20%22%26about%3D%22%20+%20about%20+%20%22%26pic%3D%22%20+%20pic%20+%20%22%26exp%3D%22%20+%20exp%20+%20%22%26ref%3D%22%20+%20ref%20+%20%22%26token%3D%22%20+%20token%20+%20%22%26height%3D%22%20+%20height%20+%20%22%26weight%3D%22%20+%20weight%20+%20%22%26age%3D%22%20+%20age%20+%20%22%26job%3D%22%20+%20job%20+%20%22%26sal%3D%22%20+%20sal%20+%20%22%26db%3D%22%20+%20db%20+%20%22%26os%3D%22%20+%20os%20+%20%22%26cen%3D%22%20+%20cen%20+%20%22%26job_l%3D%22%20+%20job_l%20+%20%22%26swd%3D%22%20+%20swd%20+%20%22%26dop%3D%22%20+%20dop%20+%20%22%26cs%3D%22%20+%20cs%20+%20%22%26port%3D%22%20+%20port%20+%20%22%26status%3D%22%20+%20status%20+%20%22%26action%3Dinsert%22%3B%0A%20%20%20%20%20%20var%20request%20%3D%20jQuery.ajax%28%7B%0A%20%20%20%20%20%20%20%20crossDomain%3A%20true%2C%0A%20%20%20%20%20%20%20%20url%3A%20url%2C%0A%20%20%20%20%20%20%20%20method%3A%20%22GET%22%2C%0A%20%20%20%20%20%20%20%20dataType%3A%20%22jsonp%22%0A%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%7D%0A%20%20%3C/script%3E%0A%0A%3C/head%3E%0A%0A%3Cbody%3E%0A%20%20%3C%21--%20style%3D%22bgcolor%3A%23673AB7%22%20--%3E%0A%20%20%3Cdiv%20align%3D%22center%22%3E%0A%20%20%20%20%3Carticle%3E%0A%20%20%20%20%20%20%3Cheader%3E%0A%20%20%20%20%20%20%20%20%3C%21--%20%3Ch1%20style%3D%22margin%3A30px%3B%22%3E%3Cstrong%20style%3D%22color%3Awhite%22%3EApplication%20form%20for%20register%3C/strong%3E%3C/h1%3E%20--%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Ch1%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cp%20style%3D%22color%3Awhite%22%3E%3Cstrong%20style%3D%22color%3Awhite%22%3EApplication%20form%20for%20register%3C/strong%3E%3C/p%3E%0A%20%20%20%20%20%20%20%20%3C/h1%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/header%3E%0A%20%20%20%20%3C/article%3E%0A%20%20%3C/div%3E%0A%20%20%3C%21--%20%3Cp%20style%3D%22color%3Awhite%22%3EThis%20is%20simple%20application%3Cp%3E%20--%3E%0A%20%20%3Cnav%20style%3D%22background%3Awhite%3Bborder%3A%20none%3Bbox-shadow%3A%200px%2015px%2020px%20-15px%20rgba%280%2C0%2C0%2C0.3%29%3B%22%20class%3D%22navbar%20navbar-default%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%20%20%3C%21--%20Brand%20and%20toggle%20get%20grouped%20for%20better%20mobile%20display%20--%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22navbar-header%22%3E%0A%20%20%20%20%20%20%20%20%3Cbutton%20type%3D%22button%22%20class%3D%22navbar-toggle%20collapsed%22%20data-toggle%3D%22collapse%22%20data-target%3D%22%23bs-example-navbar-collapse-1%22%0A%20%20%20%20%20%20%20%20%20%20aria-expanded%3D%22false%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22sr-only%22%3EToggle%20navigation%3C/span%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22icon-bar%22%3E%3C/span%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22icon-bar%22%3E%3C/span%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cspan%20class%3D%22icon-bar%22%3E%3C/span%3E%0A%20%20%20%20%20%20%20%20%3C/button%3E%0A%20%20%20%20%20%20%20%20%3C%21--%20%3Ca%20class%3D%22navbar-brand%22%20href%3D%22insert.html%22%3EECS%3C/a%3E%20--%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%3C%21--%20Collect%20the%20nav%20links%2C%20forms%2C%20and%20other%20content%20for%20toggling%20--%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22collapse%20navbar-collapse%22%20id%3D%22bs-example-navbar-collapse-1%22%3E%0A%20%20%20%20%20%20%20%20%3Cul%20class%3D%22nav%20navbar-nav%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cli%20class%3D%22active%22%3E%3Ca%20href%3D%22index.html%22%3E%3Ci%20style%3D%22margin-right%3A10px%22%20class%3D%22fa%20fa-address-book%22%3E%3C/i%3ERegister%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22update.html%22%3E%3Ci%20style%3D%22margin-right%3A10px%22%20class%3D%22fa%20fa-edit%22%3E%3C/i%3EEdit%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22delete.html%22%3E%3Ci%20style%3D%22margin-right%3A10px%22%20class%3D%22fa%20fa-remove%22%3E%3C/i%3EDelete%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cli%3E%3Ca%20href%3D%22login.html%22%3E%3Ci%20style%3D%22margin-right%3A10px%22%20class%3D%22fa%20fa-sign-in%22%3E%3C/i%3ELogin%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C/a%3E%3C/li%3E%0A%20%20%20%20%20%20%20%20%20%20%3C/li%3E%0A%20%20%20%20%20%20%20%20%3C/ul%3E%0A%20%20%20%20%20%20%3C/div%3E%3C%21--%20/.navbar-collapse%20--%3E%0A%20%20%20%20%3C/div%3E%3C%21--%20/.container-fluid%20--%3E%0A%20%20%3C/nav%3E%0A%20%20%3Cdiv%20align%3D%22left%22%3E%0A%20%20%20%20%3C%21--%20//class%3D%22container-bg%22%20--%3E%0A%20%20%20%20%3Cform%20id%3D%22myForm%22%20name%3D%22myForm%22%20action%3D%22mailer.php%22%20method%3D%22POST%22%20onsubmit%3D%22javascript%3Ainsert_value%28%29%22%20enctype%3D%22multipart/form-data%22%3E%0A%20%20%20%20%20%20%3C%21--%20%3Clabel%3EID%20%3A%3C/label%3E%20--%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22hidden%22%20name%3D%22id%22%20id%3D%22id%22%20required%3E%3C/input%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22hidden%22%20name%3D%22token%22%20id%3D%22token%22%20required%3E%3C/input%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22hidden%22%20name%3D%22cur_job%22%20id%3D%22cur_job%22%3E%3C/input%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22hidden%22%20name%3D%22database%22%20id%3D%22database%22%3E%3C/input%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22hidden%22%20name%3D%22oper%22%20id%3D%22oper%22%3E%3C/input%3E%0A%20%20%20%20%20%20%3Cinput%20type%3D%22hidden%22%20name%3D%22job_lawa%22%20id%3D%22job_lawa%22%3E%3C/input%3E%0A%20%20%20%20%20%20%3Clabel%20type%3D%22hidden%22%3E%3C/label%3E%0A%20%20%20%20%20%20%3C%21--%20%3Clabel%20id%3D%22id%22%20name%3D%22id%22%3E%3C/label%3E%3Cbr%3E%20--%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%20style%3D%22border%3A%20solid%202px%20%23E0e0e0%3Bbackground-color%3A%20white%3B%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%20style%3D%22border-bottom%3A%20solid%202px%20%23E0e0e0%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cb%20style%3D%22font-size%3A%2020px%3B%22%3EPersonal%20Information%3C/b%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%20align%3D%22center%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3E%3Cb%20style%3D%22color%3Ared%22%3E*%20%3C/b%3EYour%20picture%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cimg%20id%3D%22picpreview%22%20class%3D%22img-profile%22%20src%3D%22uploads/asdasd.PNG%22%20alt%3D%22%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%21--%20%3Cimg%20id%3D%22blah%22%20src%3D%22%23%22%20alt%3D%22your%20image%22%20class%3D%22img-profile%22%20/%3E%20--%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22file%22%20name%3D%22files%5B%5D%22%20id%3D%22pic%22%20multiple%3E%3C/input%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3ETitle%20Name%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cselect%20name%3D%22tn%22%20id%3D%22tn%22%20style%3D%22margin%3A%208px%200%3Bmargin-left%3A%201px%3Bfont-family%3A%20%27Lora%27%2C%20serif%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Coption%20value%3D%22%22%3ESelect%3C/option%3E%0A%20%20%20%20%20%20%20%20%20%20%3Coption%20value%3D%22Mr.%22%3EMr.%3C/option%3E%0A%20%20%20%20%20%20%20%20%20%20%3Coption%20value%3D%22Ms.%22%3EMs.%3C/option%3E%0A%20%20%20%20%20%20%20%20%20%20%3Coption%20value%3D%22Mrs.%22%3EMrs.%3C/option%3E%0A%20%20%20%20%20%20%20%20%3C/select%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3E%3Cb%20style%3D%22color%3Ared%22%3E*%20%3C/b%3EFirst%20Name%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22name%22%20id%3D%22name%22%20placeholder%3D%22Enter%20your%20first%20name%22%20onkeypress%3D%22return%20isCharKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checkName%28%29%22%20maxlength%3D%2230%22%20required%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-user%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3E%3Cb%20style%3D%22color%3Ared%22%3E*%20%3C/b%3ELast%20Name%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22lname%22%20id%3D%22lname%22%20placeholder%3D%22Enter%20your%20last%20name%22%20onkeypress%3D%22return%20isCharKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checkLname%28%29%22%20maxlength%3D%2230%22%20required%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-user%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EDate%20of%20birth%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22date%22%20name%3D%22dob%22%20id%3D%22dob%22%20max%3D%222100-12-31%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-calendar%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EHeight%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22height%22%20id%3D%22height%22%20placeholder%3D%22Enter%20your%20Height%20%22%20onkeypress%3D%22return%20isNumberKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20maxlength%3D%225%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-text-height%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EWeight%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22weight%22%20id%3D%22weight%22%20placeholder%3D%22Enter%20your%20Weight%22%20onkeypress%3D%22return%20isNumberKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20maxlength%3D%225%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fas%20fa-weight%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EAge%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22age%22%20id%3D%22age%22%20placeholder%3D%22Enter%20your%20Age%22%20onkeypress%3D%22return%20isNumberKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20maxlength%3D%223%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fas%20fa-birthday-cake%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3E%3Cb%20style%3D%22color%3Ared%22%3E*%20%3C/b%3EPosition%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%21--%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22pos%22%20id%3D%22pos%22%20placeholder%3D%22Enter%20your%20Position%22%20onkeypress%3D%22return%20isCharKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checkLname%28%29%22%20maxlength%3D%2230%22%20%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-group%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22mySelect_job%22%20name%3D%22mySelect_job%22%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3ESalary%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22sal%22%20id%3D%22sal%22%20placeholder%3D%22Enter%20your%20Salary%22%20onkeypress%3D%22return%20isNumberKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20maxlength%3D%2230%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-money%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%20style%3D%22border%3A%20solid%202px%20%23E0e0e0%3Bbackground-color%3A%20white%3B%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%20style%3D%22border-bottom%3A%20solid%202px%20%23E0e0e0%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cb%20style%3D%22font-size%3A%2020px%3B%22%3EEducation%3C/b%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EEducational%20institution%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22ei%22%20id%3D%22ei%22%20placeholder%3D%22Enter%20your%20University%22%20onkeypress%3D%22return%20isCharKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checku%28%29%22%20maxlength%3D%2240%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-university%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EMajor%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22major%22%20id%3D%22major%22%20placeholder%3D%22Enter%20your%20Major%22%20onkeypress%3D%22return%20isCharKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checkmajor%28%29%22%20maxlength%3D%2240%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-graduation-cap%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EMinor%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22minor%22%20id%3D%22minor%22%20placeholder%3D%22Enter%20your%20Minor%22%20onkeypress%3D%22return%20isCharKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checkminor%28%29%22%20maxlength%3D%2240%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-graduation-cap%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EGPAX%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22gpa%22%20id%3D%22gpa%22%20placeholder%3D%22Enter%20GPA%22%20onkeypress%3D%22return%20isNumberKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20maxlength%3D%224%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-graduation-cap%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%20style%3D%22border%3A%20solid%202px%20%23E0e0e0%3Bbackground-color%3A%20white%3B%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%20style%3D%22border-bottom%3A%20solid%202px%20%23E0e0e0%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cb%20style%3D%22font-size%3A%2020px%3B%22%3EContact%3C/b%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3E%3Cb%20style%3D%22color%3Ared%22%3E*%20%3C/b%3ETelephone%20Number%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22tel%22%20name%3D%22tel%22%20id%3D%22tel%22%20placeholder%3D%220213456789%22%20maxlength%3D%2210%22%20onkeypress%3D%22return%20isNumberKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checktel%28%29%22%20required%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-phone%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3E%3Cb%20style%3D%22color%3Ared%22%3E*%20%3C/b%3EEmail%20Address%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22email%22%20name%3D%22mail%22%20id%3D%22mail%22%20placeholder%3D%22Enter%20E-mail%20%20address%22%20onchange%3D%22return%20checkmail%28%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22validateEmail%28%29%22%20required%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%21--%20%3Cbutton%20type%3D%27button%27%20id%3D%27validate%27%20onclick%3D%22validateEmail%28%29%22%3EValidate%21%3C/button%3E%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%21--%20%3Ch2%20id%3D%27result%27%3E%3C/h2%3E%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-envelope%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EAddress%20in%20ID%20Card%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22aic%22%20id%3D%22aic%22%20placeholder%3D%22Enter%20your%20address%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-address-card%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3ECurrent%20Address%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22ca%22%20id%3D%22ca%22%20placeholder%3D%22Enter%20your%20address%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-address-card%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EReference%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22ref%22%20id%3D%22ref%22%20placeholder%3D%22Enter%20Who%20can%20Reference%20for%20you%22%20onkeypress%3D%22return%20isCharKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checkref%28%29%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-user-circle%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%20style%3D%22border%3A%20solid%202px%20%23E0e0e0%3Bbackground-color%3A%20white%3B%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%20style%3D%22border-bottom%3A%20solid%202px%20%23E0e0e0%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cb%20style%3D%22font-size%3A%2020px%3B%22%3EComputer%20Skill%3C/b%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22example%20example_typeahead%20inputWithIcon%20%22%20style%3D%22margin-left%3A-8px%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Clabel%3EPrograming%20language%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%20bs-example%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22sp%22%20id%3D%22sp%22%3E%3C/input%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Ci%20style%3D%22margin-left%3A2px%3B%22%20class%3D%22fa%20fa-code%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3ESoftware%20Package%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22spack%22%20id%3D%22spack%22%20placeholder%3D%22ORACLE%20Etc.%22%20onkeypress%3D%22return%20isCharKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checkpack%28%29%22%20maxlength%3D%2240%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-desktop%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3ETool%20for%20development%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22tfp%22%20id%3D%22tfp%22%20placeholder%3D%22Vscode%20Etc.%22%20onkeypress%3D%22return%20isCharKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checktool%28%29%22%20maxlength%3D%2240%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-cog%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EDatabase%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%21--%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22db%22%20id%3D%22db%22%20placeholder%3D%22MongoDB%20Etc.%22%20onkeypress%3D%22return%20isCharKey%28event%29%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checktool%28%29%22%20maxlength%3D%2240%22%20%3E%3C/input%3E%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%21--%20%3Cinput%20class%3D%22input%22%20data-list%3D%22CSS%2C%20JavaScript%2C%20HTML%2C%20SVG%2C%20ARIA%2C%20MathML%22%20id%3D%22bb%22%20name%3D%22bb%22%20onchange%3D%22javascript%3A%20cc%28this.value%29%3B%22%0A%20%20%20%20%20%20%20%20%20%20%20data-multiple%3D%22%22%20data-minchars%3D%221%22%20autocomplete%3D%22off%22%20aria-expanded%3D%22false%22%20aria-owns%3D%22awesomplete_list_2%22%20role%3D%22combobox%22%20%3E%3C/input%3E%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22mySelect_db%22%20name%3D%22mySelect_db%22%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%21--%20%3Ci%20class%3D%22fa%20fa-database%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%20--%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C%21--%20%3Cdiv%20id%3D%22mySelect_db%22%20name%3D%22mySelect_db%22%3E%3C/div%3E%20--%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EOperating%20System%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22mySelect_os%22%20name%3D%22mySelect_os%22%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%21--%20%3Ci%20class%3D%22fa%20fa-desktop%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%20--%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%0A%20%20%3Cdiv%20class%3D%22container%22%20style%3D%22border%3A%20solid%202px%20%23E0e0e0%3Bbackground-color%3A%20white%3B%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%20style%3D%22border-bottom%3A%20solid%202px%20%23E0e0e0%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cb%20style%3D%22font-size%3A%2020px%3B%22%3ESocial%3C/b%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EFacebook%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22fb%22%20id%3D%22fb%22%20placeholder%3D%22Enter%20your%20facebook%20id%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-facebook-official%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3ELine%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22line%22%20id%3D%22line%22%20placeholder%3D%22Enter%20your%20id%20line%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fab%20fa-line%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EInstagram%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22ig%22%20id%3D%22ig%22%20placeholder%3D%22Enter%20your%20Instagram%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-instagram%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EGithub%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22git%22%20id%3D%22git%22%20placeholder%3D%22Enter%20your%20Github%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-github%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3ELinkedin%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22link%22%20id%3D%22link%22%20placeholder%3D%22Enter%20your%20Linkedin%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-linkedin-square%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%20style%3D%22border%3A%20solid%202px%20%23E0e0e0%3Bbackground-color%3A%20white%3B%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%20style%3D%22border-bottom%3A%20solid%202px%20%23E0e0e0%3B%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cb%20style%3D%22font-size%3A%2020px%3B%22%3EWork%20Experiece%3C/b%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3ECurrent%20enterprise%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22cen%22%20id%3D%22cen%22%20placeholder%3D%22Enter%20your%20Current%20enterprise%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-university%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3E%3Cb%20style%3D%22color%3Ared%22%3E*%20%3C/b%3EWorking%20position%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%21--%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22wpos%22%20id%3D%22wpos%22%20placeholder%3D%22Enter%20your%20Linkedin%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-group%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22mySelect_job_l%22%20name%3D%22mySelect_job_l%22%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EStart%20work%20date%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22date%22%20name%3D%22swd%22%20id%3D%22swd%22%20max%3D%222100-12-31%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-calendar%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EDate%20of%20departure%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22date%22%20name%3D%22dop%22%20id%3D%22dop%22%20max%3D%222100-12-31%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-calendar%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3ECurrent%20salary%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22inputWithIcon%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20class%3D%22input%22%20type%3D%22text%22%20name%3D%22cs%22%20id%3D%22cs%22%20placeholder%3D%22Enter%20your%20Salary%22%3E%3C/input%3E%0A%20%20%20%20%20%20%20%20%20%20%3Ci%20class%3D%22fa%20fa-money%20fa-lg%20fa-fw%22%20aria-hidden%3D%22true%22%3E%3C/i%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C%21--%20%3Cdiv%20class%3D%22col-12%20col-sm-4%20col-md-4%20col-lg-4%20col-xl-4%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Clabel%3EPortfolio%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cinput%20type%3D%22file%22%20name%3D%22file%22%20id%3D%22port%22%20multiple%3E%3C/input%3E%0A%20%20%20%20%20%20%3C/div%3E%20--%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-6%20col-md-6%20col-lg-6%20col-xl-6%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EAbout%20you%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Ctextarea%20style%3D%22margin%3A%2010px%3Bmargin-left%3A%20-1px%3B%22%20name%3D%22about%22%20id%3D%22about%22%20placeholder%3D%22such%20as%20I%27m%20newbie%20programmer%22%0A%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checkabout%28%29%22%3E%3C/textarea%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-6%20col-md-6%20col-lg-6%20col-xl-6%22%3E%0A%20%20%20%20%20%20%20%20%3Clabel%3EExperiece%20%3A%20%3C/label%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Ctextarea%20style%3D%22margin%3A%2010px%3Bmargin-left%3A%20-1px%3B%22%20name%3D%22exp%22%20id%3D%22exp%22%20placeholder%3D%22Enter%20your%20Experiece%22%0A%20%20%20%20%20%20%20%20%20%20onchange%3D%22return%20checkexp%28%29%22%3E%3C/textarea%3E%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%0A%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%20%20%3Cdiv%20class%3D%22container%22%3E%0A%20%20%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%20style%3D%22border%3A%20solid%202px%20%23E0e0e0%3Bbackground-color%3A%20white%3B%22%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%3Cdiv%20class%3D%22container-fluid%22%20align%3D%22center%22%3E%0A%20%20%20%20%20%20%20%20%20%20%3C%21--%20%3Cp%20id%3D%22re%22%3E%3C/p%3E%20--%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cbutton%20class%3D%22btn-primary%22%20style%3D%22margin-right%3A%2015px%3B%22%20type%3D%22submit%22%20id%3D%22b1%22%20value%3D%22Insert%22%3E%3Ci%20style%3D%22margin-right%3A5px%22%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20class%3D%22fa%20fa-edit%22%3E%3C/i%3ESubmit%3C/button%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cbutton%20class%3D%22btn-warning%22%20style%3D%22margin-left%3A%2015px%3B%22%20type%3D%22button%22%20id%3D%22c1%22%20value%3D%22Cancle%22%20onclick%3D%22back%28%29%22%3E%3Ci%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20style%3D%22margin-right%3A5px%22%20class%3D%22fa%20fa-remove%22%3E%3C/i%3ECancle%3C/button%3E%3Cbr%3E%3Cbr%3E%0A%20%20%20%20%20%20%20%20%20%20%3Cdiv%20id%3D%22loader%22%20hidden%3E%3C/div%3E%0A%20%20%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/form%3E%0A%20%20%3C/div%3E%0A%0A%3C/body%3E%0A%3Cscript%20src%3D%22https%3A//ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js%22%3E%3C/script%3E%0A%3Cscript%3E%0A%20%20function%20validateEmail%28email%29%20%7B%0A%20%20%20%20var%20re%20%3D%20/%5E%28%28%5B%5E%3C%3E%28%29%5B%5C%5D%5C%5C.%2C%3B%3A%5Cs@%5C%22%5D+%28%5C.%5B%5E%3C%3E%28%29%5B%5C%5D%5C%5C.%2C%3B%3A%5Cs@%5C%22%5D+%29*%29%7C%28%5C%22.+%5C%22%29%29@%28%28%5C%5B%5B0-9%5D%7B1%2C3%7D%5C.%5B0-9%5D%7B1%2C3%7D%5C.%5B0-9%5D%7B1%2C3%7D%5C.%5B0-9%5D%7B1%2C3%7D%5C%5D%29%7C%28%28%5Ba-zA-Z%5C-0-9%5D+%5C.%29+%5Ba-zA-Z%5D%7B2%2C%7D%29%29%24/%3B%0A%20%20%20%20return%20re.test%28email%29%3B%0A%20%20%7D%0A%0A%20%20function%20validate%28%29%20%7B%0A%20%20%20%20var%20%24result%20%3D%20%24%28%22%23result%22%29%3B%0A%20%20%20%20var%20email%20%3D%20%24%28%22%23mail%22%29.val%28%29%3B%0A%20%20%20%20%24result.text%28%22%22%29%3B%0A%0A%20%20%20%20if%20%28validateEmail%28email%29%29%20%7B%0A%20%20%20%20%20%20//%20alert%28email%20+%20%22%20is%20valid%20%3A%29%22%29%0A%0A%20%20%20%20%20%20//%20%24result.text%28email%20+%20%22%20is%20valid%20%3A%29%22%29%3B%0A%20%20%20%20%20%20//%20%24result.css%28%22color%22%2C%20%22green%22%29%3B%0A%20%20%20%20%7D%20else%20%7B%0A%20%20%20%20%20%20//%20%24result.text%28email%20+%20%22%20is%20not%20valid%20%3A%28%22%29%3B%0A%20%20%20%20%20%20//%20%24result.css%28%22color%22%2C%20%22red%22%29%3B%0A%20%20%20%20%20%20alert%28%22your%20%22%20+%20email%20+%20%22%20is%20invalid%20%21%21%21%21%21%21%21%21%21%22%29%0A%20%20%20%20%20%20document.getElementById%28%27mail%27%29.value%20%3D%20%22%22%3B%0A%20%20%20%20%20%20%24%28%22%23mail%22%29.focus%28%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20return%20false%3B%0A%20%20%7D%0A%0A%20%20%24%28%22%23mail%22%29.bind%28%22change%22%2C%20validate%29%3B%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20function%20readURL%28input%29%20%7B%0A%20%20%20%20if%20%28input.files%20%26%26%20input.files%5B0%5D%29%20%7B%0A%20%20%20%20%20%20var%20reader%20%3D%20new%20FileReader%28%29%3B%0A%20%20%20%20%20%20reader.onload%20%3D%20function%20%28e%29%20%7B%0A%20%20%20%20%20%20%20%20%24%28%27%23picpreview%27%29.attr%28%27src%27%2C%20e.target.result%29%3B%0A%20%20%20%20%20%20%7D%0A%20%20%20%20%20%20reader.readAsDataURL%28input.files%5B0%5D%29%3B%0A%20%20%20%20%7D%0A%20%20%7D%0A%20%20%24%28%22%23pic%22%29.change%28function%20%28%29%20%7B%0A%20%20%20%20readURL%28this%29%3B%0A%20%20%7D%29%3B%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20function%20back%28%29%20%7B%0A%20%20%20%20window.location.reload%28%29%3B%0A%20%20%7D%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20dataget_db%20%3D%20%5B%5D%3B%0A%20%20fetch%28%27json/db.json%27%29%0A%20%20%20%20.then%28function%20%28response%29%20%7B%0A%20%20%20%20%20%20return%20response.json%28%29%3B%0A%20%20%20%20%7D%29%0A%20%20%20%20.then%28function%20%28myJson%29%20%7B%0A%20%20%20%20%20%20dataget_db%20%3D%20myJson.database%0A%20%20%20%20%20%20dataget_db.sort%28function%20%28a%2C%20b%29%20%7B%0A%20%20%20%20%20%20%20%20var%20sort_db%20%3D%20a.name%20%3C%20b.name%20%3F%20-1%20%3A%201%3B%0A%20%20%20%20%20%20%20%20return%20sort_db%0A%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20dynamicdropdown_db%28%29%0A%20%20%20%20%7D%29%3B%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20dataget_job%20%3D%20%5B%5D%3B%0A%20%20fetch%28%27json/position.json%27%29%0A%20%20%20%20.then%28function%20%28response%29%20%7B%0A%20%20%20%20%20%20return%20response.json%28%29%3B%0A%20%20%20%20%7D%29%0A%20%20%20%20.then%28function%20%28myJson%29%20%7B%0A%20%20%20%20%20%20dataget_job%20%3D%20myJson.job%0A%20%20%20%20%20%20dataget_job.sort%28function%20%28a%2C%20b%29%20%7B%0A%20%20%20%20%20%20%20%20var%20sort_job%20%3D%20a.name%20%3C%20b.name%20%3F%20-1%20%3A%201%3B%0A%20%20%20%20%20%20%20%20return%20sort_job%0A%20%20%20%20%20%20%7D%29%3B%0A%20%20%20%20%20%20dynamicdropdown_job%28%29%0A%20%20%20%20%20%20dynamicdropdown_job_l%28%29%0A%20%20%20%20%7D%29%3B%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20function%20dynamicdropdown_db%28listindexs%29%20%7B%0A%20%20%20%20var%20html%20%3D%20%27%27%3B%0A%0A%20%20%20%20html%20%3D%20html%20+%20%27%3Cselect%20id%3D%22db%22%20name%3D%22db%22%20style%3D%22margin%3A%208px%200%3Bmargin-left%3A%201px%3Bfont-family%3A%20%27%20+%20%27Lora%27%20+%20%27%2C%20serif%3B%22%3E%27%3B%0A%20%20%20%20html%20%3D%20html%20+%20%27%3Coption%20value%3D%220%22%3ESelect%20%3C/option%3E%27%3B%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20dataget_db.length%3B%20i++%29%20%7B%0A%20%20%20%20%20%20html%20%3D%20html%20+%20%27%3Coption%20value%3D%22%27%20+%20dataget_db%5Bi%5D.name%20+%20%27%22%3E%27%20+%20dataget_db%5Bi%5D.name%20+%20%27%3C/option%3E%27%0A%20%20%20%20%7D%0A%20%20%20%20html%20%3D%20html%20+%20%27%3C/select%3E%27%3B%0A%20%20%20%20%24%28%27%23mySelect_db%27%29.html%28html%29%0A%20%20%7D%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20dataget_os%20%3D%20%7B%20%22os%22%3A%20%5B%7B%20%22id%22%3A%20%221%22%2C%20%22name%22%3A%20%22Windows%22%20%7D%2C%20%7B%20%22id%22%3A%20%222%22%2C%20%22name%22%3A%20%22MacOS%22%20%7D%2C%20%7B%20%22id%22%3A%20%223%22%2C%20%22name%22%3A%20%22LinuxOS%22%20%7D%5D%20%7D%0A%20%20dataget_os.os.sort%28function%20%28a%2C%20b%29%20%7B%0A%20%20%20%20var%20sort_os%20%3D%20a.name%20%3C%20b.name%20%3F%20-1%20%3A%201%3B%0A%20%20%20%20return%20sort_os%0A%20%20%7D%29%3B%0A%20%20var%20html%20%3D%20%27%27%3B%0A%20%20html%20%3D%20html%20+%20%27%3Cselect%20id%3D%22os%22%20name%3D%22op%22%20style%3D%22margin%3A%208px%200%3Bmargin-left%3A%201px%3Bfont-family%3A%20%27%20+%20%27Lora%27%20+%20%27%2C%20serif%3B%22%3E%27%3B%0A%20%20html%20%3D%20html%20+%20%27%3Coption%20value%3D%220%22%3ESelect%20%3C/option%3E%27%3B%0A%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20dataget_os.os.length%3B%20i++%29%20%7B%0A%20%20%20%20html%20%3D%20html%20+%20%27%3Coption%20value%3D%22%27%20+%20dataget_os.os%5Bi%5D.name%20+%20%27%22%3E%27%20+%20dataget_os.os%5Bi%5D.name%20+%20%27%3C/option%3E%27%0A%20%20%7D%0A%20%20html%20%3D%20html%20+%20%27%3C/select%3E%27%3B%0A%20%20%24%28%27%23mySelect_os%27%29.html%28html%29%0A%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20function%20dynamicdropdown_job%28listindexs%29%20%7B%0A%20%20%20%20var%20html%20%3D%20%27%27%3B%0A%20%20%20%20html%20%3D%20html%20+%20%27%3Cselect%20id%3D%22job%22%20name%3D%22job%22%20style%3D%22margin%3A%208px%200%3Bmargin-left%3A%201px%3Bfont-family%3A%20%27%20+%20%27Lora%27%20+%20%27%2C%20serif%3B%22required%3E%27%3B%0A%20%20%20%20html%20%3D%20html%20+%20%27%3Coption%20value%3D%220%22%3ESelect%20%3C/option%3E%27%3B%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20dataget_job.length%3B%20i++%29%20%7B%0A%20%20%20%20%20%20html%20%3D%20html%20+%20%27%3Coption%20value%3D%22%27%20+%20dataget_job%5Bi%5D.name%20+%20%27%22%3E%27%20+%20dataget_job%5Bi%5D.name%20+%20%27%3C/option%3E%27%0A%20%20%20%20%7D%0A%20%20%20%20html%20%3D%20html%20+%20%27%3C/select%3E%27%3B%0A%20%20%20%20%24%28%27%23mySelect_job%27%29.html%28html%29%0A%20%20%7D%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20function%20dynamicdropdown_job_l%28listindexs%29%20%7B%0A%20%20%20%20var%20html%20%3D%20%27%27%3B%0A%20%20%20%20html%20%3D%20html%20+%20%27%3Cselect%20id%3D%22job_l%22%20name%3D%22job_lawa%22%20style%3D%22margin%3A%208px%200%3Bmargin-left%3A%201px%3Bfont-family%3A%20%27%20+%20%27Lora%27%20+%20%27%2C%20serif%3B%22required%3E%27%3B%0A%20%20%20%20html%20%3D%20html%20+%20%27%3Coption%20value%3D%220%22%3ESelect%20%3C/option%3E%27%3B%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%20dataget_job.length%3B%20i++%29%20%7B%0A%20%20%20%20%20%20html%20%3D%20html%20+%20%27%3Coption%20value%3D%22%27%20+%20dataget_job%5Bi%5D.name%20+%20%27%22%3E%27%20+%20dataget_job%5Bi%5D.name%20+%20%27%3C/option%3E%27%0A%20%20%20%20%7D%0A%20%20%20%20html%20%3D%20html%20+%20%27%3C/select%3E%27%3B%0A%20%20%20%20%24%28%27%23mySelect_job_l%27%29.html%28html%29%0A%20%20%7D%0A%3C/script%3E%0A%0A%3Cdiv%20class%3D%22container%22%3E%0A%20%20%3Cdiv%20class%3D%22row%22%3E%0A%20%20%20%20%3Cdiv%3E%0A%20%20%20%20%20%20%3Cdiv%20class%3D%22col-12%20col-sm-12%20col-md-12%20col-lg-12%20col-xl-12%22%3E%0A%20%20%20%20%20%20%20%20%3Cbr%3E%0A%20%20%20%20%20%20%3C/div%3E%0A%20%20%20%20%3C/div%3E%0A%20%20%3C/div%3E%0A%3C/div%3E%0A%3Cdiv%20align%3D%22center%22%3E%0A%20%20%3Cfooter%3E%0A%20%20%20%20%3Cbr%3E%0A%20%20%20%20%3Cp%20style%3D%22color%3Awhite%22%3E%20%3Ca%20href%3D%22mailto%3Asomeone@example.com%22%3E%3C/a%3ECopyright%20%A92018%20Enterprise%20Computing%20Services%0A%20%20%20%20%20%20%28Thailand%29%20Co.%2CLtd%20All%20rights%20reserved%3C/p%3E%0A%20%20%20%20%3Cbr%3E%0A%20%20%3C/footer%3E%0A%3C/div%3E%0A%0A%3Cscript%3E%0A%20%20function%20getRandomID%28min%2C%20max%29%20%7B%0A%20%20%20%20return%20Math.floor%28Math.random%28%29%20*%20%28max%20-%20min%20+%201%29%20+%20min%29%3B%0A%20%20%7D%0A%20%20function%20new_id%28%29%20%7B%0A%20%20%20%20var%20rndnum%20%3D%20getRandomID%281%2C%2099999%29%3B%0A%20%20%20%20var%20id%20%3D%20%28%270000%27%20+%20rndnum%29.slice%28-5%29%3B%0A%20%20%20%20id%20%3D%20%27UID%27%20+%20id%3B%0A%20%20%20%20document.getElementById%28%22id%22%29.value%20%3D%20id%3B%0A%20%20%20%20return%20id%3B%0A%20%20%7D%0A%20%20new_id%28%29%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20function%20makeid%28%29%20%7B%0A%20%20%20%20var%20text%20%3D%20%22%22%3B%0A%20%20%20%20var%20possible%20%3D%20%22ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789%22%3B%0A%20%20%20%20for%20%28var%20i%20%3D%200%3B%20i%20%3C%205%3B%20i++%29%0A%20%20%20%20%20%20text%20+%3D%20possible.charAt%28Math.floor%28Math.random%28%29%20*%20possible.length%29%29%3B%0A%20%20%20%20//%20console.log%28text%29%3B%0A%20%20%20%20document.getElementById%28%22token%22%29.value%20%3D%20text%3B%0A%20%20%20%20//%20console.log%28document.getElementById%28%22token%22%29%29%3B%0A%20%20%20%20return%20text%3B%0A%20%20%7D%0A%20%20document.getElementById%28%22token%22%29.value%20%3D%20makeid%28%29%3B%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20function%20isNumberKey%28evt%29%20%7B%0A%20%20%20%20var%20charCode%20%3D%20%28evt.which%29%20%3F%20evt.which%20%3A%20event.keyCode%0A%20%20%20%20if%20%28charCode%20%3E%2031%20%26%26%20%28charCode%20%3C%2046%20%7C%7C%20charCode%20%3E%2057%29%29%0A%20%20%20%20%20%20return%20false%3B%0A%20%20%20%20return%20true%3B%0A%20%20%7D%20%20%20%20%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20function%20isCharKey%28evt%29%20%7B%0A%20%20%20%20var%20charCode%20%3D%20%28evt.which%29%20%3F%20evt.which%20%3A%20event.keyCode%0A%20%20%20%20if%20%28charCode%20%3E%2031%20%26%26%20%28charCode%20%3C%2041%20%7C%7C%20charCode%20%3E%2057%29%29%0A%20%20%20%20%20%20return%20true%3B%0A%20%20%20%20return%20false%3B%0A%20%20%7D%20%20%20%20%0A%3C/script%3E%0A%3Cscript%3E%0A%20%20const%20url%20%3D%20%27process.php%27%3B%0A%20%20const%20form%20%3D%20document.querySelector%28%27form%27%29%3B%0A%20%20form.addEventListener%28%27submit%27%2C%20e%20%3D%3E%20%7B%0A%20%20%20%20e.preventDefault%28%29%3B%0A%20%20%20%20const%20files%20%3D%20document.getElementById%28%27pic%27%29.files%3B%0A%20%20%20%20const%20formData%20%3D%20new%20FormData%28%29%3B%0A%0A%20%20%20%20for%20%28let%20i%20%3D%200%3B%20i%20%3C%20files.length%3B%20i++%29%20%7B%0A%20%20%20%20%20%20let%20file%20%3D%20files%5Bi%5D%3B%0A%20%20%20%20%20%20formData.append%28%27files%5B%5D%27%2C%20file%29%3B%0A%20%20%20%20%7D%0A%20%20%20%20fetch%28url%2C%20%7B%0A%20%20%20%20%20%20method%3A%20%27POST%27%2C%0A%20%20%20%20%20%20body%3A%20formData%0A%20%20%20%20%7D%29.then%28response%20%3D%3E%20%7B%0A%0A%20%20%20%20%20%20document.myForm.submit%28%29%3B%0A%0A%20%20%20%20%7D%29%3B%0A%20%20%7D%29%3B%0A%3C/script%3E%0A%3Cscript%20type%3D%22text/javascript%22%3E%0A%20%20function%20googleTranslateElementInit%28%29%20%7B%0A%20%20%20%20new%20google.translate.TranslateElement%28%7B%20pageLanguage%3A%20%27en%27%20%7D%2C%20%27google_translate_element%27%29%3B%0A%20%20%7D%0A%3C/script%3E%0A%0A%3Cscript%20type%3D%22text/javascript%22%20src%3D%22//translate.google.com/translate_a/element.js%3Fcb%3DgoogleTranslateElementInit%22%3E%3C/script%3E%0A%0A%3Cscript%20src%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js%22%3E%3C/script%3E%0A%3C%21--%20%3Cscript%20src%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js%22%3E%3C/script%3E%20--%3E%0A%3Cscript%20src%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js%22%3E%3C/script%3E%0A%3Cscript%20src%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js%22%3E%3C/script%3E%0A%3Cscript%20src%3D%22js/bootstrap-tagsinput.min.js%22%3E%3C/script%3E%0A%3Cscript%20src%3D%22js/bootstrap-tagsinput-angular.min.js%22%3E%3C/script%3E%0A%3Cscript%20src%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js%22%3E%3C/script%3E%0A%3Cscript%20src%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/generic.js%22%3E%3C/script%3E%0A%3Cscript%20src%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.js%22%3E%3C/script%3E%0A%3Cscript%20src%3D%22https%3A//cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js%22%3E%3C/script%3E%0A%3Cscript%20src%3D%22assets/app.js%22%3E%3C/script%3E%0A%3Cscript%20src%3D%22assets/app_bs3.js%22%3E%3C/script%3E%0A%3Cscript%20src%3D%22js/checkvalidate.js%22%3E%3C/script%3E%0A%3C%21--%20%3Cscript%20src%3D%22js/upload.js%22%3E%3C/script%3E%20--%3E%0A%3Cscript%20src%3D%22js/bootstrap.min.js%22%3E%3C/script%3E%0A%0A%3C/html%3E"));
+  function validate() {
+    var $result = $("#result");
+    var email = $("#mail").val();
+    $result.text("");
 
-  </script> 
+    if (validateEmail(email)) {
+      // alert(email + " is valid :)")
+
+      // $result.text(email + " is valid :)");
+      // $result.css("color", "green");
+    } else {
+      // $result.text(email + " is not valid :(");
+      // $result.css("color", "red");
+      alert("your " + email + " is invalid !!!!!!!!!")
+      document.getElementById('mail').value = "";
+      $("#mail").focus();
+    }
+    return false;
+  }
+
+  $("#mail").bind("change", validate);
+</script>
+<script>
+  function readURL(input) {
+    if (input.files && input.files[0]) {
+      var reader = new FileReader();
+      reader.onload = function (e) {
+        $('#picpreview').attr('src', e.target.result);
+      }
+      reader.readAsDataURL(input.files[0]);
+    }
+  }
+  $("#pic").change(function () {
+    readURL(this);
+  });
+</script>
+<script>
+  function back() {
+    window.location.reload();
+  }
+</script>
+<script>
+  dataget_db = [];
+  fetch('json/db.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      dataget_db = myJson.database
+      dataget_db.sort(function (a, b) {
+        var sort_db = a.name < b.name ? -1 : 1;
+        return sort_db
+      });
+      dynamicdropdown_db()
+    });
+</script>
+<script>
+  dataget_job = [];
+  fetch('json/position.json')
+    .then(function (response) {
+      return response.json();
+    })
+    .then(function (myJson) {
+      dataget_job = myJson.job
+      dataget_job.sort(function (a, b) {
+        var sort_job = a.name < b.name ? -1 : 1;
+        return sort_job
+      });
+      dynamicdropdown_job()
+      dynamicdropdown_job_l()
+    });
+</script>
+<script>
+  function dynamicdropdown_db(listindexs) {
+    var html = '';
+
+    html = html + '<select id="db" name="db" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
+    html = html + '<option value="0">Select </option>';
+    for (var i = 0; i < dataget_db.length; i++) {
+      html = html + '<option value="' + dataget_db[i].name + '">' + dataget_db[i].name + '</option>'
+    }
+    html = html + '</select>';
+    $('#mySelect_db').html(html)
+  }
+</script>
+<script>
+  dataget_os = { "os": [{ "id": "1", "name": "Windows" }, { "id": "2", "name": "MacOS" }, { "id": "3", "name": "LinuxOS" }] }
+  dataget_os.os.sort(function (a, b) {
+    var sort_os = a.name < b.name ? -1 : 1;
+    return sort_os
+  });
+  var html = '';
+  html = html + '<select id="os" name="op" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;">';
+  html = html + '<option value="0">Select </option>';
+  for (var i = 0; i < dataget_os.os.length; i++) {
+    html = html + '<option value="' + dataget_os.os[i].name + '">' + dataget_os.os[i].name + '</option>'
+  }
+  html = html + '</select>';
+  $('#mySelect_os').html(html)
+
+</script>
+<script>
+  function dynamicdropdown_job(listindexs) {
+    var html = '';
+    html = html + '<select id="job" name="job" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;"required>';
+    html = html + '<option value="0">Select </option>';
+    for (var i = 0; i < dataget_job.length; i++) {
+      html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
+    }
+    html = html + '</select>';
+    $('#mySelect_job').html(html)
+  }
+</script>
+<script>
+  function dynamicdropdown_job_l(listindexs) {
+    var html = '';
+    html = html + '<select id="job_l" name="job_lawa" style="margin: 8px 0;margin-left: 1px;font-family: ' + 'Lora' + ', serif;"required>';
+    html = html + '<option value="0">Select </option>';
+    for (var i = 0; i < dataget_job.length; i++) {
+      html = html + '<option value="' + dataget_job[i].name + '">' + dataget_job[i].name + '</option>'
+    }
+    html = html + '</select>';
+    $('#mySelect_job_l').html(html)
+  }
+</script>
+
+<div class="container">
+  <div class="row">
+    <div>
+      <div class="col-12 col-sm-12 col-md-12 col-lg-12 col-xl-12">
+        <br>
+      </div>
+    </div>
+  </div>
+</div>
+<div align="center">
+  <footer>
+    <br>
+    <p style="color:white"> <a href="mailto:someone@example.com"></a>Copyright ©2018 Enterprise Computing Services
+      (Thailand) Co.,Ltd All rights reserved</p>
+    <br>
+  </footer>
+</div>
+
+<script>
+  function getRandomID(min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min);
+  }
+  function new_id() {
+    var rndnum = getRandomID(1, 99999);
+    var id = ('0000' + rndnum).slice(-5);
+    id = 'UID' + id;
+    document.getElementById("id").value = id;
+    return id;
+  }
+  new_id()
+</script>
+<script>
+  function makeid() {
+    var text = "";
+    var possible = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    for (var i = 0; i < 5; i++)
+      text += possible.charAt(Math.floor(Math.random() * possible.length));
+    // console.log(text);
+    document.getElementById("token").value = text;
+    // console.log(document.getElementById("token"));
+    return text;
+  }
+  document.getElementById("token").value = makeid();
+</script>
+<script>
+  function isNumberKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 46 || charCode > 57))
+      return false;
+    return true;
+  }    
+</script>
+<script>
+  function isCharKey(evt) {
+    var charCode = (evt.which) ? evt.which : event.keyCode
+    if (charCode > 31 && (charCode < 41 || charCode > 57))
+      return true;
+    return false;
+  }    
+</script>
+<script>
+  const url = 'process.php';
+  const form = document.querySelector('form');
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const files = document.getElementById('pic').files;
+    const formData = new FormData();
+
+    for (let i = 0; i < files.length; i++) {
+      let file = files[i];
+      formData.append('files[]', file);
+    }
+    fetch(url, {
+      method: 'POST',
+      body: formData
+    }).then(response => {
+
+      document.myForm.submit();
+
+    });
+  });
+</script>
+<script type="text/javascript">
+  function googleTranslateElementInit() {
+    new google.translate.TranslateElement({ pageLanguage: 'en' }, 'google_translate_element');
+  }
+</script>
+
+<script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.5/js/bootstrap.min.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/typeahead.js/0.11.1/typeahead.bundle.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.2.20/angular.min.js"></script>
+<script src="js/bootstrap-tagsinput.min.js"></script>
+<script src="js/bootstrap-tagsinput-angular.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/rainbow.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/generic.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/html.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/rainbow/1.2.0/js/language/javascript.js"></script>
+<script src="assets/app.js"></script>
+<script src="assets/app_bs3.js"></script>
+<script src="js/checkvalidate.js"></script>
+<!-- <script src="js/upload.js"></script> -->
+<script src="js/bootstrap.min.js"></script>
+
+</html>
